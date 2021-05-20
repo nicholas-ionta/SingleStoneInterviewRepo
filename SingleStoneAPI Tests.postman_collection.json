@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "716f221f-e38d-4581-8ed2-443f95362849",
+		"name": "SingleStoneAPI Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllTest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/contact/getall",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"contact",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSpecific",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/contact/get/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"contact",
+						"get",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": {\r\n\"first\": \"Nick\",\r\n\"middle\": \"James\",\r\n\"last\": \"Ionta\"\r\n},\r\n\"address\": {\r\n\"street\": \"a;sldkfjal;skdjflaksdj street\",\r\n\"city\": \"Baltimore\",\r\n\"state\": \"MD\",\r\n\"zip\": \"21546\"\r\n},\r\n\"phone\": [\r\n{\r\n\"number\": \"654-987-6548\",\r\n\"type\": \"mobile\"\r\n}\r\n],\r\n\"email\": \"nick.ionta@gmail.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/contact/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"contact",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/contact/delete/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"contact",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Id\": 2,\r\n        \"name\": {\r\n            \"first\": \"Nick\",\r\n            \"middle\": \"James\",\r\n            \"last\": \"Ionta\"\r\n        },\r\n        \"address\": {\r\n            \"street\": \"a;sldkfjal;skdjflaksdj street\",\r\n            \"city\": \"Baltimore\",\r\n            \"state\": \"MD\",\r\n            \"zip\": \"21546\"\r\n        },\r\n        \"phone\": [\r\n{\r\n\"number\": \"654-987-6548\",\r\n\"type\": \"mobile\"\r\n},\r\n{\r\n\"number\": \"654-987-6453\",\r\n\"type\": \"home\"\r\n}\r\n],\r\n        \"email\": \"nick.ionta@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44314/api/contact/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44314",
+					"path": [
+						"api",
+						"contact",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call-List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
